@@ -7,29 +7,34 @@ jumlah_kaos = int(input("Masukkan Jumlah Kaos: "))
 # Input Kode Kaos
 kode_kupon = input("Masukkan Kode Kupon: ")
 
-# Variabel Diskon Kupon
-diskon_kupon = {"Serbu1": 0.1, "Serbu2": 0.15, "Serbu3": 0.25}
+# Diskon berdasarkan kode kupon
+if kode_kupon == "Serbu1":
+    diskon = 0.1
+elif kode_kupon == "Serbu2":
+    diskon = 0.15
+elif kode_kupon == "Serbu3":
+    diskon = 0.25
+else:
+    diskon = 0
 
 # Minimal kaos untuk mendapatkan diskon
 minimal_kaos_diskon = 3
 
-# Total pembelian sebelum diskon
+# Operasi total pembelian sebelum diskon
 total_pembelian = harga_kaos * jumlah_kaos
 
-# Total pembelian setelah diskon
+# Operasi total pembelian setelah diskon
 total_setelah_diskon = total_pembelian
 
-# Percabangan Diskon
-if jumlah_kaos >= minimal_kaos_diskon:
-    if kode_kupon in diskon_kupon:
-        diskon = diskon_kupon[kode_kupon]
-        total_setelah_diskon = total_pembelian * (1 - diskon)
+# Syarat Diskon
+if jumlah_kaos >= minimal_kaos_diskon and diskon > 0:
+    total_setelah_diskon = total_pembelian * (1 - diskon)
 
-# Operasi Hitung Ongkos Kirim
+# Menghitung ongkos kirim
 ongkos_kirim = 0
 if total_setelah_diskon >= 700000 or kode_kupon == "Serbu1":
     ongkos_kirim = 0
-else:
+else :
     ongkos_kirim = total_setelah_diskon * 0.005
 
 # Total pembelian setelah ongkos kirim
