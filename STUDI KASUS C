@@ -38,8 +38,8 @@ profit_C = (harga_jual_C * produksi_C) - biaya_total_C
 
 # Menentukan bahan baku yang paling menguntungkan
 if profit_A > profit_B and profit_A > profit_C and budget >= biaya_total_A:
-    print("Bahan baku A paling menguntungkan.")
+    print("\nBahan baku A paling menguntungkan.")
 elif profit_B > profit_A and profit_B > profit_C and budget >= biaya_total_B:
-    print("Bahan baku B paling menguntungkan.")
+    print("\nBahan baku B paling menguntungkan.")
 else:
-    print("Bahan baku C paling menguntungkan.")
+    print("\nBahan baku C paling menguntungkan.")
