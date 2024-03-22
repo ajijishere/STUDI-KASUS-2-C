@@ -1,0 +1,47 @@
+# Input Harga Kaos
+harga_kaos = int(input("Masukkan Harga Kaos: Rp"))
+
+# Input Jumlah Kaos
+jumlah_kaos = int(input("Masukkan Jumlah Kaos: "))
+
+# Input Kode Kaos
+kode_kupon = input("Masukkan Kode Kupon: ")
+
+# Variabel Diskon Kupon
+diskon_kupon = {"Serbu1": 0.1, "Serbu2": 0.15, "Serbu3": 0.25}
+
+# Minimal kaos untuk mendapatkan diskon
+minimal_kaos_diskon = 3
+
+# Total pembelian sebelum diskon
+total_pembelian = harga_kaos * jumlah_kaos
+
+# Total pembelian setelah diskon
+total_setelah_diskon = total_pembelian
+
+# Percabangan Diskon
+if jumlah_kaos >= minimal_kaos_diskon:
+    if kode_kupon in diskon_kupon:
+        diskon = diskon_kupon[kode_kupon]
+        total_setelah_diskon = total_pembelian * (1 - diskon)
+
+# Operasi Hitung Ongkos Kirim
+ongkos_kirim = 0
+if total_setelah_diskon >= 700000 or kode_kupon == "Serbu1":
+    ongkos_kirim = 0
+else:
+    ongkos_kirim = total_setelah_diskon * 0.005
+
+# Total pembelian setelah ongkos kirim
+total_pembelian_setelah_ongkir = total_setelah_diskon + ongkos_kirim
+
+# Print Struk Belanja
+print("\n===== Struk Belanja =====\n")
+print("Jumlah Kaos:", jumlah_kaos)
+print("Harga per Kaos: Rp", harga_kaos)
+print("Total Pembelian Sebelum Diskon: Rp", total_pembelian)
+print("Kode Kupon:", kode_kupon)
+print("Diskon Kupon:", int(diskon * 100), "%")
+print("Total Pembelian Setelah Diskon: Rp", total_setelah_diskon)
+print("Ongkos Kirim: Rp", ongkos_kirim)
+print("Total Pembelian Setelah Ongkos Kirim: Rp", total_pembelian_setelah_ongkir)
