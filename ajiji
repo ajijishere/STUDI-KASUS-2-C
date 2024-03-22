@@ -1,0 +1,45 @@
+# Input Data tiap Bahan Baku
+#Bahan Baku A
+print("\nBahan Baku A\n")
+biaya_operasional_A = int(input("Masukkan biaya operasional maksimal untuk bahan baku kualitas A: Rp"))
+harga_bahan_A = int(input("Masukkan harga bahan baku kualitas A per kg: Rp"))
+produksi_A = int(input("Masukkan jumlah produk yang dihasilkan dari bahan baku kualitas A: "))
+harga_jual_A = int(input("Masukkan harga jual minimum untuk bahan baku kualitas A: Rp"))
+
+#Bahan Baku B
+print("\nBahan Baku B\n")
+biaya_operasional_B = int(input("Masukkan biaya operasional maksimal untuk bahan baku kualitas B: Rp"))
+harga_bahan_B = int(input("Masukkan harga bahan baku kualitas B per kg: Rp"))
+produksi_B = int(input("Masukkan jumlah produk yang dihasilkan dari bahan baku kualitas B: "))
+harga_jual_B = int(input("Masukkan harga jual minimum untuk bahan baku kualitas B: Rp"))
+
+#Bahan Baku C
+print("\nBahan Baku C\n")
+biaya_operasional_C = int(input("Masukkan biaya operasional maksimal untuk bahan baku kualitas C: Rp"))
+harga_bahan_C = int(input("Masukkan harga bahan baku kualitas C per kg: Rp"))
+produksi_C = int(input("Masukkan jumlah produk yang dihasilkan dari bahan baku kualitas C: "))
+harga_jual_C = int(input("Masukkan harga jual minimum untuk bahan baku kualitas C: Rp"))
+
+# Input jumlah kebutuhan bahan baku untuk produksi
+jumlah_kebutuhan = int(input("\nMasukkan jumlah kebutuhan bahan baku untuk produksi (kg): "))
+
+# Input budget UKM
+budget = int(input("\nMasukkan budget total untuk biaya produksi: Rp"))
+
+# Menghitung biaya total untuk masing-masing bahan baku
+biaya_total_A = biaya_operasional_A + (jumlah_kebutuhan * harga_bahan_A)
+biaya_total_B = biaya_operasional_B + (jumlah_kebutuhan * harga_bahan_B)
+biaya_total_C = biaya_operasional_C + (jumlah_kebutuhan * harga_bahan_C)
+
+# Menghitung profit untuk masing-masing bahan baku
+profit_A = (harga_jual_A * produksi_A) - biaya_total_A
+profit_B = (harga_jual_B * produksi_B) - biaya_total_B
+profit_C = (harga_jual_C * produksi_C) - biaya_total_C
+
+# Menentukan bahan baku yang paling menguntungkan
+if profit_A > profit_B and profit_A > profit_C and budget >= biaya_total_A:
+    print("Bahan baku A paling menguntungkan.")
+elif profit_B > profit_A and profit_B > profit_C and budget >= biaya_total_B:
+    print("Bahan baku B paling menguntungkan.")
+else:
+    print("Bahan baku C paling menguntungkan.")
