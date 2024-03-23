@@ -1,52 +1,52 @@
-# Input Data Karyawan
-nama = input("Masukkan Nama Karyawan: ")
-usia = int(input("Masukkan Umur Karyawan: "))
-jabatan = input("Masukkan Jabatan Karyawan: ")
-divisi = input("Masukkan Divisi Karyawan: ")
+#Input data
+nama = input("Masukkan nama karyawan: ")
+usia = int(input("Masukkan usia karyawan: "))
+jabatan = input("Masukkan jabatan karyawan: ")
+divisi = input("Masukkan divisi karyawan: ")
 
-# Menghitung Gaji dan Bonus
-if jabatan == "Staff tetap" or "Staff":
+# Menghitung gaji dan bonus
+if jabatan == "Staff tetap":
     if divisi == "Pembenihan":
         gaji = 2500000
         bonus = 100000
-    elif divisi == "Pemasaran" or "Divisi Pemasaran":
+    elif divisi == "Pemasaran":
         gaji = 2500000
         bonus = 200000
-    elif divisi == "Pengolahan" or "Divisi Pengolahan":
+    elif divisi == "Pengolahan":
         gaji = 2500000
         bonus = 300000
-elif jabatan == "Kepala Divisi" or "Kepala":
-    if divisi == "Pembenihan" or "Divisi Pembenihan":
+elif jabatan == "Kepala Divisi":
+    if divisi == "Pembenihan":
         gaji = 3500000
         bonus = 270000
-    elif divisi == "Pemasaran" or "Divisi Pemasaran":
+    elif divisi == "Pemasaran":
         gaji = 3500000
         bonus = 500000
-    elif divisi == "Pengolahan" or "Divisi Pengolahan":
+    elif divisi == "Pengolahan":
         gaji = 3500000
         bonus = 550000
-elif jabatan == "General Manager" or "GM":
-    if divisi == "Pembenihan" or "Divisi Pembenihan":
+elif jabatan == "General Manager":
+    if divisi == "Pembenihan":
         gaji = 4000000
         bonus = 350000
-    elif divisi == "Pemasaran" or "Divisi Pemasaran":
+    elif divisi == "Pemasaran":
         gaji = 4000000
         bonus = 550000
-    elif divisi == "Pengolahan" or "Divisi Pengolahan":
+    elif divisi == "Pengolahan":
         gaji = 4000000
         bonus = 650000
 else:
     print("Data jabatan atau divisi tidak valid.")
     exit()
 
-# Menghitung Total Gaji
+# Menghitung total gaji
 total_gaji = gaji + bonus
 
-# Print Hasil
-print("\nNama Karyawan:", nama)
+# Menampilkan hasil
+print("\n=====Data Karyawan=====\nNama Karyawan:", nama)
 print("Usia Karyawan:", usia)
 print("Jabatan Karyawan:", jabatan)
 print("Divisi Karyawan:", divisi)
-print("\nGaji:", gaji)
+print("Gaji:", gaji)
 print("Bonus:", bonus)
 print("\nTotal Gaji:", total_gaji)
