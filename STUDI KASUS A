@@ -9,7 +9,7 @@ if omzet_proyek_A > 1000000:
     keputusan = "Pilih proyek A"
 elif omzet_proyek_B > 500000:
     keputusan = "Pilih proyek B"
-elif tingkat_kesulitan_proyek_A == "rendah":
+elif tingkat_kesulitan_proyek_A == "Rendah" or "rendah":
     keputusan = "Pilih proyek A"
 elif risiko_proyek_B_lebihrendah == True:
     keputusan = "Pilih proyek B"
@@ -17,4 +17,4 @@ else:
     keputusan = "Tidak memilih proyek"
 
 # Output keputusan
-print("Keputusan Akhir: ",keputusan)
+print("Keputusan Akhir: ", keputusan)
