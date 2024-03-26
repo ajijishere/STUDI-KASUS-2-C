@@ -1,0 +1,20 @@
+# Input data
+omzet_proyek_A = int(input("Masukkan Omzet Proyek A: "))
+omzet_proyek_B = int(input("Masukkan Omzet Proyek B: "))
+tingkat_kesulitan_proyek_A = input("Tingkat Kesulitan Proyek A: ")
+risiko_proyek_B_lebihrendah = bool(input("Masukkan Angka 1 jika resiko proyek B lebih rendah \nMasukkan angka 0 jika resiko proyek B lebih tinggi: "))
+
+# Mengevaluasi keputusan berdasarkan kondisi yang diberikan
+if omzet_proyek_A > 1000000:
+    keputusan = "Pilih proyek A"
+elif omzet_proyek_B > 500000:
+    keputusan = "Pilih proyek B"
+elif tingkat_kesulitan_proyek_A == "rendah":
+    keputusan = "Pilih proyek A"
+elif risiko_proyek_B_lebihrendah == True:
+    keputusan = "Pilih proyek B"
+else:
+    keputusan = "Tidak memilih proyek"
+
+# Output keputusan
+print("Keputusan Akhir: ",keputusan)
